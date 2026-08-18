@@ -4,6 +4,8 @@
 
 ## Dataset
 
+**Source:** PJM Hourly Energy Consumption (Kaggle).
+
 ## Approach
 
 ## Key Results
