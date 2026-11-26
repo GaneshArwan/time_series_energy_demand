@@ -11,9 +11,14 @@ build/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 
 # Notebooks & large data/model artifacts
 .ipynb_checkpoints/
+models/
+*.pkl
+*.joblib
 data/*.csv
 data/*.parquet
 data/*.zip

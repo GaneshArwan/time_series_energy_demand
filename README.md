@@ -4,9 +4,8 @@
 How accurately can next-day electricity demand be predicted, and what drives forecast errors?
 
 ## Dataset
-- **Source:** PJM Hourly Energy Consumption (Kaggle) — hourly energy consumption data across multiple US regions over 10+ years.
-- **Size:** [Rows x features]
-- **Description:** [What the data represents and any notable quality issues]
+- **Source:** PJM Hourly Energy Consumption (Kaggle) — hourly electricity demand across PJM Interconnection regional transmission zones over 10+ years.
+- **Location:** Place local CSV files under `data/` (gitignored except `data/.gitkeep`).
 
 ## Skills Demonstrated
 Time series decomposition, ARIMA/Prophet, feature engineering with lag variables, forecast evaluation
@@ -15,40 +14,24 @@ Time series decomposition, ARIMA/Prophet, feature engineering with lag variables
 - Time series decomposition showing trend, seasonality, and residuals
 - Comparison of ARIMA, Prophet, and gradient boosting approaches
 - Feature engineering with lag features, rolling averages, and calendar effects
-- Forecast accuracy evaluation using MAE, RMSE, and MAPE with honest error analysis
+- Forecast accuracy evaluation using MAE, RMSE, and MAPE with error analysis
 
-## Approach
-1. **Data Cleaning & EDA** - [Summary of preprocessing steps]
-2. **Feature Engineering** - [Key transformations and rationale]
-3. **Modeling** - [Algorithms used and why]
-4. **Evaluation** - [Metrics, cross-validation strategy]
+## Planned Milestones
+1. **Data Ingestion & EDA** (`notebooks/`) — Inspect regional hourly series, timezone/DST shifts, and missing timestamps.
+2. **Decomposition & Feature Engineering** — Extract trend/seasonal components alongside lag features, rolling statistics, and calendar indicators.
+3. **Forecasting & Evaluation** — Benchmark ARIMA, Prophet, and gradient boosting models using MAE, RMSE, and MAPE.
 
-## Key Results
-| Metric | Score |
-|--------|-------|
-| MAE | TBD |
-| RMSE | TBD |
-| MAPE | TBD |
+## Current Structure
+- `data/` — Local dataset directory (ignored by git)
+- `notebooks/` — Exploratory and modeling notebooks workspace
+- `src/__init__.py` — Package exports
+- `src/guardrails.py` — Pydantic v2 request/record schemas, safe `data/` path resolution, and Babel i18n helpers (`en`, `id`)
+- `tests/test_guardrails.py` — Unit tests for input validation, path traversal checks, and localization
 
-## Key Findings
-1. [Most important finding with specific number]
-2. [Second finding]
-3. [Business implication or recommendation]
-
-## How to Run
-```bash
+## Setup & Verification
+```powershell
 python -m venv .venv
-# Windows: .venv\Scripts\activate  |  macOS/Linux: source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python src/train.py
-streamlit run app.py  # for demo
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
-
-## Files
-- `notebooks/01_eda.ipynb` - Exploratory analysis
-- `notebooks/02_modeling.ipynb` - Model training and evaluation
-- `src/` - Production-ready scripts
-- `app.py` - Streamlit demo (if applicable)
-
-## Methodology & Limitations
-[2-3 paragraphs on approach, assumptions, and what the model does NOT capture]
