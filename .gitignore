@@ -1,0 +1,43 @@
+# Python & virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebooks & large data/model artifacts
+.ipynb_checkpoints/
+data/*.csv
+data/*.parquet
+data/*.zip
+data/*.xlsx
+!data/.gitkeep
+
+# Secrets & environment
+.env
+.env.*
+!.env.example
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local orchestration & generated agent templates (keep project rules tracked)
+docs/maestro/
+.agents/agents/
+.agents/commands/
+.agents/hooks/
+.agents/skills/
+.agents/COMMANDS-QUICK-REF.md
+.agents/RULES.md
+.agents/rules/*
+!.agents/rules/ponytail.md
