@@ -1,5 +1,7 @@
 # Time Series Forecasting: PJM East Electricity Demand
 
+**Live Interactive App:** https://pjm-energy-demand-forecast.streamlit.app/
+
 Predicting next-day (24-hour-ahead) electricity load across the PJM East (`PJME`) transmission zone and quantifying what drives forecast errors across seasons, days of the week, and peak hours.
 
 ## Dataset & Cleaning
@@ -35,6 +37,8 @@ Predicting next-day (24-hour-ahead) electricity load across the PJM East (`PJME`
 - [02_modeling.ipynb](notebooks/02_modeling.ipynb) — Causal feature construction, 4-model benchmark, and residual/error breakdown ([Open in Colab](https://colab.research.google.com/github/GaneshArwan/time_series_energy_demand/blob/main/notebooks/02_modeling.ipynb))
 
 ## Interactive Demo & Project Layout
+- **Streamlit Cloud:** https://pjm-energy-demand-forecast.streamlit.app/
+
 ```text
 ├── app.py                   # Streamlit explorer (Forecast, STL, Benchmark, Error Analysis)
 ├── artifacts/               # Precomputed summary, metrics, STL, and test predictions (< 1 MB)
