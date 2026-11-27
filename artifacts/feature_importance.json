@@ -1,0 +1,90 @@
+{
+  "model": "LightGBM",
+  "features": [
+    {
+      "feature": "roll_mean_168",
+      "importance": 3395,
+      "importance_pct": 13.69
+    },
+    {
+      "feature": "dayofyear",
+      "importance": 2621,
+      "importance_pct": 10.57
+    },
+    {
+      "feature": "roll_std_168",
+      "importance": 2585,
+      "importance_pct": 10.42
+    },
+    {
+      "feature": "roll_mean_24",
+      "importance": 2432,
+      "importance_pct": 9.81
+    },
+    {
+      "feature": "doy_sin",
+      "importance": 2231,
+      "importance_pct": 9.0
+    },
+    {
+      "feature": "dayofweek",
+      "importance": 2143,
+      "importance_pct": 8.64
+    },
+    {
+      "feature": "doy_cos",
+      "importance": 2001,
+      "importance_pct": 8.07
+    },
+    {
+      "feature": "roll_std_24",
+      "importance": 1465,
+      "importance_pct": 5.91
+    },
+    {
+      "feature": "lag_24",
+      "importance": 1452,
+      "importance_pct": 5.85
+    },
+    {
+      "feature": "lag_336",
+      "importance": 1154,
+      "importance_pct": 4.65
+    },
+    {
+      "feature": "lag_168",
+      "importance": 1053,
+      "importance_pct": 4.25
+    },
+    {
+      "feature": "lag_48",
+      "importance": 762,
+      "importance_pct": 3.07
+    },
+    {
+      "feature": "hour",
+      "importance": 519,
+      "importance_pct": 2.09
+    },
+    {
+      "feature": "hour_cos",
+      "importance": 399,
+      "importance_pct": 1.61
+    },
+    {
+      "feature": "month",
+      "importance": 237,
+      "importance_pct": 0.96
+    },
+    {
+      "feature": "hour_sin",
+      "importance": 223,
+      "importance_pct": 0.9
+    },
+    {
+      "feature": "is_weekend",
+      "importance": 128,
+      "importance_pct": 0.52
+    }
+  ]
+}

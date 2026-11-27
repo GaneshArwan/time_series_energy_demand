@@ -1,0 +1,90 @@
+{
+  "split": {
+    "horizon_hours": 24,
+    "train_rows": 136632,
+    "test_rows": 8760,
+    "train_start": "2002-01-01T01:00:00",
+    "train_end": "2017-08-03T00:00:00",
+    "test_start": "2017-08-03T01:00:00",
+    "test_end": "2018-08-03T00:00:00"
+  },
+  "models": {
+    "Seasonal Naive (t-168h)": {
+      "mae": 3581.81,
+      "rmse": 4852.33,
+      "mape": 11.22
+    },
+    "ARIMA": {
+      "mae": 5680.02,
+      "rmse": 6645.42,
+      "mape": 19.59
+    },
+    "Prophet": {
+      "mae": 3241.42,
+      "rmse": 4227.92,
+      "mape": 10.23
+    },
+    "LightGBM": {
+      "mae": 1881.49,
+      "rmse": 2558.01,
+      "mape": 5.91
+    }
+  },
+  "best_model": "LightGBM",
+  "lightgbm_cv": {
+    "n_splits": 5,
+    "train_feature_rows": 136296,
+    "folds": [
+      {
+        "fold": 1,
+        "train_rows": 22716,
+        "val_rows": 22716,
+        "mae": 1666.1,
+        "rmse": 2430.37,
+        "mape": 4.82
+      },
+      {
+        "fold": 2,
+        "train_rows": 45432,
+        "val_rows": 22716,
+        "mae": 1602.75,
+        "rmse": 2263.0,
+        "mape": 4.76
+      },
+      {
+        "fold": 3,
+        "train_rows": 68148,
+        "val_rows": 22716,
+        "mae": 1564.03,
+        "rmse": 2217.36,
+        "mape": 4.73
+      },
+      {
+        "fold": 4,
+        "train_rows": 90864,
+        "val_rows": 22716,
+        "mae": 1722.06,
+        "rmse": 2385.73,
+        "mape": 5.31
+      },
+      {
+        "fold": 5,
+        "train_rows": 113580,
+        "val_rows": 22716,
+        "mae": 1738.98,
+        "rmse": 2358.54,
+        "mape": 5.46
+      }
+    ],
+    "mean": {
+      "mae": 1658.78,
+      "rmse": 2331.0,
+      "mape": 5.02
+    },
+    "std": {
+      "mae": 67.24,
+      "rmse": 78.95,
+      "mape": 0.31
+    }
+  }
+}

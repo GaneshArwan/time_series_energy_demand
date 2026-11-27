@@ -1,0 +1,13 @@
+{
+  "region": "PJME",
+  "raw_rows": 145366,
+  "clean_rows": 145392,
+  "duplicates_resolved": 4,
+  "gaps_interpolated": 30,
+  "start_date": "2002-01-01T01:00:00",
+  "end_date": "2018-08-03T00:00:00",
+  "min_mw": 14544.0,
+  "median_mw": 31420.0,
+  "mean_mw": 32078.93,
+  "max_mw": 62009.0
+}
